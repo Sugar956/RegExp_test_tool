@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式测试工具</title>
+    <link rel="stylesheet" href="测试工具样式.css">
+</head>
+<body>
+<div class="wrap cf">
+    <h1 class="title">正则表达式测试工具</h1>
+<div id="regexp">
+    <textarea id="userText" class="textBox" placeholder="再此输入待匹配的文本"> </textarea>
+    <p>
+        正则表达式：
+        <input type="text" id="userRegExp" class="textField" placeholder="在此输入正则表达式">
+        <input type="checkbox" name="userModifier" value="i">忽略大小写
+        <input type="checkbox" name="userModifier" value="g">全局匹配
+        <input type="checkbox" name="userModifier" value="m">多行匹配
+        <input type="button" id="matchingBtn" value="测试匹配">
+    </p>
+    匹配结果：
+    <div  id="matchingResult" class="textBox readOnly"></div>
+    <script src="测试工具.js"></script>
+    <p>
+        替换文本：
+        <input type="text" id="userReplaceText" class="textField" placeholder="在此输入替换文本">
+        <input type="button" id="replaceBtn" value="替换">
+    </p>
+    替换结果：
+    <div  id="replaceResult" class="textBox readOnly"></div>
+</div>
+<dl id="regList">
+    <dt>常用表达式</dt>
+    <dd><a href="javascript:" title="[\u4e00-\u4fa5]">匹配中文字符</a></dd>
+    <dd><a href="javascript:" title="[1-9]\d{4,}">QQ</a></dd>
+    <dd><a href="javascript:" title="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">验证e-mail地址</a></dd>
+    <dd><a href="javascript:" title="^http://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$">验证URL</a></dd>
+    <dd><a href="javascript:" title="\d{14}[[0-9],0-9xX]">验证身份证号</a></dd>
+</dl>
+</div>
+<p style="text-align: center">本程序由<strong style="color:blue">云c</strong>制作，欢迎使用！</p>
+<script type="text/javascript" src="测试工具.js"></script>
+
+</body>
+</html>
